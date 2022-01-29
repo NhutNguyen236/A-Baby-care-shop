@@ -15,7 +15,13 @@
     $result = mysqli_query($connection, $user_check_query);
     $user = mysqli_fetch_assoc($result);
     
-    if ($user) { // if user exists
+    // check all fields are filled or not
+    if(empty($username) || empty($fullname) || empty($password) || empty($email)){
+        $message = "All fields are required";
+        echo $message;
+    }
+
+    else if ($user) { // if user exists
         if ($user['username'] === $username) {
             $message = "Username already exists" ;
             echo $message;
