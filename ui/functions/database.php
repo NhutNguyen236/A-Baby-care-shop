@@ -4,7 +4,7 @@ Connect to database
 <?php
     //assign db variables
     $host = "localhost";
-    $dbuser = "root";
+    $dbuser = "yuki";
     $dbpassword = "123";
     $dbname = "baby_care";
 

@@ -406,12 +406,14 @@
 											<input
 												type="email"
 												placeholder="Email"
+												name="email"
 											/>
 										</div>
 										<div class="col-md-6 col-12 mb-15">
 											<input
 												type="password"
 												placeholder="Password"
+												name="password"
 											/>
 										</div>
 										<div class="col-md-6 col-12 mb-15">
