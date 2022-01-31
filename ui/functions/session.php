@@ -1,5 +1,5 @@
 <?php
-    include("database.php");
+    include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
 
     session_start();
     

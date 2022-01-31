@@ -1,5 +1,5 @@
 <?php
-    require('database.php');
+    include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
 
     //assgin variables by using POST method
     $username = $_POST['username'];    
