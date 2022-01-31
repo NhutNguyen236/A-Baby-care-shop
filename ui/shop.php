@@ -187,7 +187,7 @@ include("./functions/session.php");
         </div><!-- Header Section End -->
 
         <!-- Page Banner Section Start -->
-        <div class="page-banner-section section" style="background-image: url(assets/images/hero/hero-1.jpg)">
+        <div class="page-banner-section section" style="background-image: url(assets/images/banner/shop_banner.png)">
             <div class="container">
                 <div class="row">
                     <div class="page-banner-content col">
