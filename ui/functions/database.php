@@ -1,7 +1,7 @@
-/**
-Connect to database
-*/
 <?php
+    /**
+     * Connect to database
+     */
     //assign db variables
     $host = "localhost";
     $dbuser = "yuki";

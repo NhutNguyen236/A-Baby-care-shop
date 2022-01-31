@@ -10,7 +10,7 @@
 
     // get username to display in TrangNguoiDung.php
     $get_username = "SELECT `username` from `customer` where `username` = '$username';";
-    $get_username_result = mysqli_query($connection, $get_username) or die(mysqli_error($connection));
+    $get_username_result = mysqli_query($connection , $get_username) or die(mysqli_error($connection));
     $get_username_fetch = mysqli_fetch_array($get_username_result);
 
     if (!empty($username) && !empty($password)){
@@ -25,7 +25,7 @@
         if ($count == 1){
             $_SESSION['login_user'] = $username;
             
-            header("location: ../shop.html");
+            header("location: ../shop.php");
         }
 
         else{

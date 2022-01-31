@@ -39,6 +39,7 @@
                 
         if($connection->query($sql) === true){
             echo "New record created successfully";
+            header("location: ../shop.php");
         }
         else{
             echo "Error: " . $sql . "<br>" . $connection->error;
