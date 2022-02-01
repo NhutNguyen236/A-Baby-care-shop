@@ -38,7 +38,6 @@ include("./functions/session.php");
 </head>
 
 <body>
-
     <div class="main-wrapper">
 
         <!-- Header Section Start -->
@@ -232,6 +231,7 @@ include("./functions/session.php");
                         </div>
                     </div>
 
+                    
                     <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
 
                         <div class="product-item">

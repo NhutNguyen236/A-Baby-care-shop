@@ -12,7 +12,7 @@
     $login_session = $row['username'];
     
     if(!isset($_SESSION['login_user'])){
-        header("location: ../login_register.php");
+        header("location: ./login_register.php");
         die();
     }
 ?>
