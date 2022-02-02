@@ -4913,3 +4913,8 @@ img.mfp-img {
   line-height: 30px;
   color: #1a161e;
   margin: 0; }
+
+/*-- hide away property class --*/
+.hide{
+  display: none;
+}

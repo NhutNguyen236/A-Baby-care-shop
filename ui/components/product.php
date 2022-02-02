@@ -1,14 +1,3 @@
-<?php
-    include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
-
-    // get all products from openDatabase
-    $sql = "SELECT * FROM item";
-    $result = $connection->query($sql) or die(mysqli_error($connection));
-    
-    // display item on the page
-    while ($row = $result->fetch_assoc()) {
-?>
-
 <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-40">
 
     <div class="product-item">
@@ -55,7 +44,3 @@
     </div>
 
 </div>
-
-<?php
-    }
-?>
