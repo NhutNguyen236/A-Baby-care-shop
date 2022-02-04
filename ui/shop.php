@@ -102,7 +102,7 @@
                     ?>
 
                     <div class="row">
-                        <h1>Search for <span style="font-weight: bold; font-style: italic;">"<?php echo $search;?>"</span></h1><br>
+                        <h1>Result(s) for <span style="font-weight: bold; font-style: italic;">"<?php echo $search;?>"</span></h1><br>
                     </div>
                     
                     <?php
