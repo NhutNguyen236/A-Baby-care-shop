@@ -4,8 +4,8 @@
      */
     //assign db variables
     $host = "localhost";
-    $dbuser = "yuki";
-    $dbpassword = "123";
+    $dbuser = "root";
+    $dbpassword = "";
     $dbname = "baby_care";
 
     //connect to db
