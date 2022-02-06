@@ -4,6 +4,8 @@
 <?php
     // check session if it is set or not
     include("./functions/session.php");
+    // include function add to cart
+    require("./functions/addToCart.php");
 ?>
 
 <head>
@@ -51,7 +53,7 @@
                         <h1>Shop</h1>
                         <ul class="page-breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop.php">Shop</a></li>
                         </ul>
 
                     </div>

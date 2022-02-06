@@ -1,3 +1,7 @@
+<?php
+    // check session
+    include($_SERVER['DOCUMENT_ROOT']."/store/ui/functions/session.php");
+?>
 <!-- Header Section Start -->
 <div class="header-section section">
 
@@ -87,7 +91,7 @@
                         </div>
 
                         <div class="header-mini-cart">
-                            <a href="cart.html"><img src="assets/images/icons/cart.png" alt="Cart"> <span>02($250)</span></a>
+                            <a href="cart.php"><img src="assets/images/icons/cart.png" alt="Cart"> <span>02($250)</span><span></a>
                         </div>
 
                     </div><!-- Header Advance Search End -->
@@ -116,7 +120,7 @@
                                 </li>
                                 <li><a href="#">PAGES</a>
                                     <ul class="sub-menu">
-                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="cart.php">Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="login-register.html">Login & Register</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>

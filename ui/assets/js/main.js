@@ -454,3 +454,9 @@ $('[name="payment-method"]').on('click', function(){
     
    
 })(jQuery);	
+
+/**-------------------------------------
+ * Total price for products
+ * -----------------------------------*/
+
+// get subtotal

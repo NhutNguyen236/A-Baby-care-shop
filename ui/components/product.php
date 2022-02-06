@@ -8,8 +8,7 @@
 
                 <div class="image-overlay">
                     <div class="action-buttons">
-                        <button>add to cart</button>
-                        <button>add to wishlist</button>
+                        <a href="shop.php?action=add&item_id=<?php echo $row['item_id'];?>"><button name="addtocart">add to cart</button></a>
                     </div>
                 </div>
 
@@ -20,6 +19,7 @@
                 <div class="content-left">
 
                     <h4 class="title"><a href="single-product.html"><?php echo $row['item_name'];?></a></h4>
+                    <h3><?php echo $row['item_id'];?></h3>
 
                     <div class="ratting">
                         <i class="fa fa-star"></i>
