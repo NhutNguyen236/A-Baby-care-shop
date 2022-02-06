@@ -140,7 +140,7 @@ include("./functions/session.php");
                             <div class="main-menu">
                                 <nav>
                                     <ul>
-                                        <li><a href="index.html">HOME</a>
+                                        <li><a href="shop.php">HOME</a>
                                             <ul class="sub-menu">
                                                 <li><a href="index.html">Home One</a></li>
                                                 <li><a href="index-2.html">Home Two</a></li>
@@ -149,7 +149,7 @@ include("./functions/session.php");
                                         </li>
                                         <li><a href="shop.html">SHOP</a>
                                             <ul class="sub-menu">
-                                                <li><a href="shop.html">Shop</a></li>
+                                                <li><a href="shop.php">Shop</a></li>
                                                 <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
                                                 <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
                                                 <li><a href="single-product.html">Single Product</a></li>
@@ -159,9 +159,9 @@ include("./functions/session.php");
                                         </li>
                                         <li class="active"><a href="#">PAGES</a>
                                             <ul class="sub-menu">
-                                                <li class="active"><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="login-register.html">Login & Register</a></li>
+                                                <li class="active"><a href="cart.php">Cart</a></li>
+                                                <li><a href="checkout.php">Checkout</a></li>
+                                                <li><a href="login-register.php">Login & Register</a></li>
                                                 <li><a href="wishlist.html">Wishlist</a></li>
                                             </ul>
                                         </li>
@@ -281,7 +281,7 @@ include("./functions/session.php");
                                     </tbody>
                                 </table>
                                 <div class="proceed-to-checkout section mt-30">
-                                    <a href="#">Proceed to Checkout</a>
+                                    <a href="checkout.php">Proceed to Checkout</a>
                                 </div>
                             </div>
                         </div>

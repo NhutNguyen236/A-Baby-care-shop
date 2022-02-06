@@ -1,6 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
+<?php
+// check session if it is set or not
+include("./functions/session.php");
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -83,7 +87,7 @@
                         <div class="header-top-right">
 
                             <p><a href="#">My Account</a></p>
-                            <p><a href="login-register.html">Register</a><a href="login-register.html">Login</a></p>
+                            <p><a href="login_register.php">Register</a><a href="login_register.php">Login</a></p>
 
                         </div><!-- Header Shop Links End -->
                     </div>
@@ -125,7 +129,7 @@
                             </div>
 
                             <div class="header-mini-cart">
-                                <a href="cart.html"><img src="assets/images/icons/cart.png" alt="Cart"> <span>02($250)</span></a>
+                                <a href="cart.php"><img src="assets/images/icons/cart.png" alt="Cart"> <span>02($250)</span></a>
                             </div>
 
                         </div><!-- Header Advance Search End -->
@@ -144,7 +148,7 @@
                                     </li>
                                     <li><a href="shop.html">SHOP</a>
                                         <ul class="sub-menu">
-                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="shop.php">Shop</a></li>
                                             <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
                                             <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
                                             <li><a href="single-product.html">Single Product</a></li>
@@ -154,9 +158,9 @@
                                     </li>
                                     <li class="active"><a href="#">PAGES</a>
                                         <ul class="sub-menu">
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li class="active"><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="login-register.html">Login & Register</a></li>
+                                            <li><a href="cart.php">Cart</a></li>
+                                            <li class="active"><a href="checkout.php">Checkout</a></li>
+                                            <li><a href="login-register.php">Login & Register</a></li>
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                         </ul>
                                     </li>
@@ -346,7 +350,16 @@
                                </div>
 
                            </div>
-
+                           <?php
+                                include("../database.php");
+                                // check if the user hit search button or not
+                                // get the search query
+                                // $search_query = "SELECT * FROM cart INNER JOIN item on cart.id_item = item.item_id INNER JOIN customer on cart.customer_id = customer.customer_id";
+                                // global $search_query_result;
+                                include($_SERVER['DOCUMENT_ROOT'] . "/store/ui/controller/getCart.php");
+                                $search_query_result = $result;
+                                
+                            ?>
                            <div class="col-lg-5">
                                <div class="row">
 
@@ -355,24 +368,39 @@
 
                                        <h4 class="checkout-title">Cart Total</h4>
 
-                                       <div class="checkout-cart-total">
+                                       <div class="cart-table table-responsive mb-40">
 
-                                           <h4>Product <span>Total</span></h4>
+                                       <table>
+                                            <thead>
+                                                <tr>
+                                                    <th class="pro-thumbnail">STT</th>
+                                                    <th class="pro-title">Product</th>
+                                                    <th class="pro-price">Price</th>
+                                                    
+                                                </tr>
+                                            </thead>
 
-                                           <ul>
-                                               <li>Samsome Notebook Pro 5 X 01 <span>$295.00</span></li>
-                                               <li>Aquet Drone  D 420 X 02 <span>$550.00</span></li>
-                                               <li>Play Station X 22 X 01 <span>$295.00</span></li>
-                                               <li>Roxxe Headphone Z 75 X 01 <span>$110.00</span></li>
-                                           </ul>
+                                            <tbody>
+                                                <?php foreach ($search_query_result as $dsnv) : ?>
+                                                    <tr>
+                                                        <td><?php echo $dsnv['id_cart'] ?></td>
+                                                        <td><?php echo $dsnv['item_name'] ?></td>
+                                                        <td><?php echo $dsnv['cost'] ?></td>
+                                                        
+                                                    </tr>
 
-                                           <p>Sub Total <span>$1250.00</span></p>
-                                           <p>Shipping Fee <span>$00.00</span></p>
 
-                                           <h4>Grand Total <span>$1250.00</span></h4>
-
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                         
                                        </div>
-
+                                       <tr class="order-total col-12 mb-40">
+                                       <strong><th>Total : </th></strong>
+                                            <td>
+                                                <strong><span class="amount" id="total"></span></strong>
+                                            </td>
+                                        </tr>               
                                    </div>
 
                                    <!-- Payment Method -->
@@ -516,6 +544,8 @@
 <script src="assets/js/ajax-mail.js"></script>
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
+
+<script src="assets/js/totalPrice.js"></script>
 
 </body>
 

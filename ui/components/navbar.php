@@ -49,7 +49,7 @@
                     <div class="header-top-right">
 
                         <p><a href="#">My Account</a></p>
-                        <p><a href="login-register.html">Register</a><a href="login-register.html">Login</a></p>
+                        <p><a href="login-register.php">Register</a><a href="login-register.php">Login</a></p>
 
                     </div><!-- Header Shop Links End -->
                 </div>
@@ -101,14 +101,14 @@
                     <div class="main-menu">
                         <nav>
                             <ul>
-                                <li><a href="index.html">HOME</a>
+                                <li><a href="shop.php">HOME</a>
                                     <ul class="sub-menu">
                                         <li><a href="index.html">Home One</a></li>
                                         <li><a href="index-2.html">Home Two</a></li>
                                         <li><a href="index-box.html">Home Box</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="shop.html">SHOP</a>
+                                <li class="active"><a href="shop.php">SHOP</a>
                                     <ul class="sub-menu">
                                         <li class="active"><a href="shop.html">Shop</a></li>
                                         <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
@@ -121,8 +121,8 @@
                                 <li><a href="#">PAGES</a>
                                     <ul class="sub-menu">
                                         <li><a href="cart.php">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="login-register.html">Login & Register</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
+                                        <li><a href="login-register.php">Login & Register</a></li>
                                         <li><a href="wishlist.html">Wishlist</a></li>
                                     </ul>
                                 </li>

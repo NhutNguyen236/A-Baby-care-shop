@@ -52,7 +52,7 @@
 
                         <h1>Shop</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.php">Home</a></li>
                             <li><a href="shop.php">Shop</a></li>
                         </ul>
 
