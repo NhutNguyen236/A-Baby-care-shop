@@ -1,13 +1,13 @@
 <?php
-ob_start();
-session_start();
-include '../config/connect.php';
-if (!isset($_SESSION['admindb'])) {
-  header('location: /store/ui/login_register.php');
-} else {
-  $ad = $_SESSION['admindb'];
-}
-date_default_timezone_set("Asia/Ho_Chi_Minh");
+  ob_start();
+  session_start();
+  include '../config/connect.php';
+  if (!isset($_SESSION['admindb'])) {
+    header('location: /store/ui/login_register.php');
+  } else {
+    $ad = $_SESSION['admindb'];
+  }
+  date_default_timezone_set("Asia/Ho_Chi_Minh");
 ?>
 
 <?php

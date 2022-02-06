@@ -1,7 +1,3 @@
-<?php
-    // check session
-    include($_SERVER['DOCUMENT_ROOT']."/store/ui/functions/session.php");
-?>
 <!-- Header Section Start -->
 <div class="header-section section">
 
@@ -13,7 +9,7 @@
                 <div class="col mt-10 mb-10 d-none d-md-flex">
                     <!-- Header Top Left Start -->
                     <div class="header-top-left">
-                        <p>Welcome to Jadusona</p>
+                        <p>Welcome to Phuong Anh Baby care</p>
                         <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
                     </div><!-- Header Top Left End -->
                 </div>
@@ -47,9 +43,16 @@
                 <div class="col mt-10 mb-10">
                     <!-- Header Shop Links Start -->
                     <div class="header-top-right">
-
-                        <p><a href="#">My Account</a></p>
-                        <p><a href="login-register.php">Register</a><a href="login-register.php">Login</a></p>
+                        <?php
+                            if(isset($_SESSION['login_user'])){
+                                echo "<a href='./functions/logout.php' class='btn btn-theme-two'>Logout</a>";
+                            }
+                            else{
+                                echo "<p><a href='../login_register.php'>Register</a><a href='login-register.php'>Login</a></p>";
+                            }
+                        ?>
+                        <!--Check if session is set to process logout-->
+                        
 
                     </div><!-- Header Shop Links End -->
                 </div>
@@ -67,7 +70,7 @@
                     <!-- Logo Start -->
                     <div class="header-logo">
                         <a href="index.html">
-                            <img src="assets/images/logo.png" alt="Jadusona">
+                            <img src="assets/images/logo_main.png" alt="Jadusona">
                         </a>
                     </div><!-- Logo End -->
                 </div>
@@ -86,9 +89,7 @@
                             </div>
                         </div>
 
-                        <div class="header-wishlist">
-                            <a href="wishlist.html"><img src="assets/images/icons/wishlist.png" alt="Wishlist"> <span>02</span></a>
-                        </div>
+                        
 
                         <div class="header-mini-cart">
                             <a href="cart.php"><img src="assets/images/icons/cart.png" alt="Cart"> <span>02($250)</span><span></a>

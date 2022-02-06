@@ -25,7 +25,15 @@
         if ($count == 1){
             $_SESSION['login_user'] = $username;
             
-            header("location: ../shop.php");
+            // redirecting by role
+            if(strcmp($username, "admin") == 0){
+                header("location: /store/admin/admin/index.php");
+                echo "Hello world";
+            }
+            
+            else{
+                header("location: ../shop.php");
+            }
         }
 
         else{
