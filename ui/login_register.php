@@ -46,16 +46,13 @@
 			<!-- Page Banner Section Start -->
 			<div
 				class="page-banner-section section"
-				style="background-image: url(assets/images/hero/hero-1.jpg)"
+				style="background-image: url(assets/images/banner/shop_banner.png)"
 			>
 				<div class="container">
 					<div class="row">
 						<div class="page-banner-content col">
 							<h1>Login & Register</h1>
-							<ul class="page-breadcrumb">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="wishlist.html">Wishlist</a></li>
-							</ul>
+				
 						</div>
 					</div>
 				</div>
