@@ -1,28 +1,28 @@
 <?php
-  ob_start();
-  session_start();
-  include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
-  if (!isset($_SESSION['admindb'])) {
-    header('location: /store/ui/login_register.php');
-  } else {
-    $ad = $_SESSION['admindb'];
-  }
-  date_default_timezone_set("Asia/Ho_Chi_Minh");
+ob_start();
+session_start();
+include($_SERVER['DOCUMENT_ROOT'] . "/store/database.php");
+if (!isset($_SESSION['admindb'])) {
+  header('location: /store/ui/login_register.php');
+} else {
+  $ad = $_SESSION['admindb'];
+}
+date_default_timezone_set("Asia/Ho_Chi_Minh");
 ?>
 
 <?php
 //add dữ liệu
 $erors = [];
 if (isset($_POST['name_item'])) {
-    $name_item = $_POST['name_item'];
-    $cost = $_POST['cost'];
+  $name_item = $_POST['name_item'];
+  $cost = $_POST['cost'];
 
-    $sql = "INSERT INTO item (item_id, item_name, cost) VALUES (null, '$name_item','$cost')";
-    if (mysqli_query($connection, $sql)) {
-      header('location: index.php');
-    } else {
-      echo "Thêm mới không thành công";
-      echo mysqli_error($connection);
+  $sql = "INSERT INTO item (item_id, item_name, cost) VALUES (null, '$name_item','$cost')";
+  if (mysqli_query($connection, $sql)) {
+    header('location: index.php');
+  } else {
+    echo "Thêm mới không thành công";
+    echo mysqli_error($connection);
   }
 }
 ?>
@@ -44,14 +44,25 @@ if (isset($_POST['name_item'])) {
 
 <body>
   <div class="container">
-    <h1><a href="https://learncodeweb.com/php/php-crud-in-bootstrap-4-with-search-functionality/">BABY ITEM SHOP</a></h1>
+
+    <table style="width: 100%; height: 100%; margin-bottom: 10px;">
+      <tr>
+        <th>
+          <a href="">BABY ITEM SHOP</a>
+        </th>
+        <th style="text-align: right;">
+          <button type="submit" class="btn btn-danger"><a href="logout.php">LOGOUT</a></button>
+        </th>
+      </tr>
+    </table>
+
     <div class="card">
       <div class="card-header"><i class="fa fa-fw fa-globe"></i> <strong>ADMIN PAGE</strong></div>
 
       <div class="card-body">
         <form action="" method="POST">
           <div class="row">
-            
+
 
             <div class="col-sm-3">
               <label for="">ITEM NAME</label>
@@ -95,8 +106,8 @@ if (isset($_POST['name_item'])) {
                   <td><?php echo $dsnv['item_id'] ?></td>
                   <td><?php echo $dsnv['item_name'] ?></td>
                   <td><?php echo $dsnv['cost'] ?></td>
-                  <td ALIGN="center"><a href="edit.php?item_id=<?php echo $dsnv['item_id'];?>" class="text-danger">EDIT</a> |
-                    <a href="delete.php?id_item=<?php echo $dsnv['item_id'];?>" class="text-danger">DELETE</a>
+                  <td ALIGN="center"><a href="edit.php?item_id=<?php echo $dsnv['item_id']; ?>" class="text-danger">EDIT</a> |
+                    <a href="delete.php?id_item=<?php echo $dsnv['item_id']; ?>" class="text-danger">DELETE</a>
                   </td>
                 </tr>
               <?php endforeach; ?>
