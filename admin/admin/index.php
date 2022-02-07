@@ -1,7 +1,7 @@
 <?php
   ob_start();
   session_start();
-  include '../config/connect.php';
+  include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
   if (!isset($_SESSION['admindb'])) {
     header('location: /store/ui/login_register.php');
   } else {
@@ -75,7 +75,7 @@ if (isset($_POST['id_item'])) {
     </div>
 
     <?php
-    $bangdsgv = mysqli_query($conn, "SELECT * FROM item");
+    $bangdsgv = mysqli_query($connection, "SELECT * FROM item");
     ?>
 
     <div class="container" style="margin-top: 20px">
@@ -95,8 +95,8 @@ if (isset($_POST['id_item'])) {
             <tbody>
               <?php foreach ($bangdsgv as $dsnv) : ?>
                 <tr>
-                  <td><?php echo $dsnv['id_item'] ?></td>
-                  <td><?php echo $dsnv['name_item'] ?></td>
+                  <td><?php echo $dsnv['item_id'] ?></td>
+                  <td><?php echo $dsnv['item_name'] ?></td>
                   <td><?php echo $dsnv['cost'] ?></td>
                   <td ALIGN="center"><a href="edit.php?id_item=<?php echo $dsnv['id_item'] ?>" class="text-danger">EDIT</a> |
                     <a href="delete.php?id_item=<?php echo $dsnv['id_item'] ?>" class="text-danger">DELETE</a>

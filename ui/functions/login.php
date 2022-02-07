@@ -23,15 +23,16 @@
         $count = mysqli_num_rows($result);
 
         if ($count == 1){
-            $_SESSION['login_user'] = $username;
-            
+        
             // redirecting by role
             if(strcmp($username, "admin") == 0){
+                $_SESSION['admindb'] = $username;
                 header("location: /store/admin/admin/index.php");
                 echo "Hello world";
             }
             
             else{
+                $_SESSION['login_user'] = $username;
                 header("location: ../shop.php");
             }
         }
