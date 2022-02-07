@@ -1,7 +1,7 @@
 <?php 
   ob_start();
   session_start();
-  include '../config/connect.php';
+  include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
   if (!isset($_SESSION['admindb'])) {
     header('location: login.php');
   }else{
@@ -13,6 +13,7 @@
 
 <?php 
 	$id_item = $_GET['id_item'];
-	mysqli_query($conn,"DELETE FROM item where id_item ='$id_item'");
+  echo $id_item;
+	mysqli_query($connection,"DELETE FROM item where item_id ='$id_item'");
 	header('location: index.php');
 ?>

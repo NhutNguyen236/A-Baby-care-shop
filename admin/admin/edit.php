@@ -1,22 +1,22 @@
 <?php 
-  ob_start();
-  session_start();
-  include '../config/connect.php';
-  if (!isset($_SESSION['admindb'])) {
-    header('location: login.php');
-  }else{
-    $ad = $_SESSION['admindb'];
-  }
-  date_default_timezone_set("Asia/Ho_Chi_Minh");
+    ob_start();
+    session_start();
+    include($_SERVER['DOCUMENT_ROOT']."/store/database.php");
+    if (!isset($_SESSION['admindb'])) {
+        header('location: login.php');
+    }else{
+        $ad = $_SESSION['admindb'];
+    }
+    date_default_timezone_set("Asia/Ho_Chi_Minh");
 ?>
 
 <?php 
 
-	if (isset($_GET['id_item'])) { //điều kiện lấy mã lớp
+	if (isset($_GET['item_id'])) { //điều kiện lấy mã lớp
         //lấy mã lớp
-		$id_item = $_GET['id_item'];
+		$item_id = $_GET['item_id'];
     // hiển thị dữ liệu lớp
-    $dm = mysqli_query($conn,"SELECT * FROM item where id_item='$id_item'");
+    $dm = mysqli_query($connection,"SELECT * FROM item where item_id='$item_id'");
 	#$dm_hienthi = mysqli_fetch_assoc($dm);
     $dm_hienthi = mysqli_fetch_array($dm, MYSQLI_ASSOC);
 
@@ -25,7 +25,7 @@
             $cost = $_POST['cost'];
             
             // sửa dữ liệu của bảng lớp học
-            $them_moi = mysqli_query($conn,"UPDATE item set name_item ='$name_item',cost ='$cost' where id_item='$id_item'");
+            $them_moi = mysqli_query($connection,"UPDATE item set item_name ='$name_item',cost ='$cost' where item_id='$item_id'");
 
                 if($them_moi){
                     header('location: index.php'); // trả về file index nếu sửa thành công
@@ -59,7 +59,7 @@
                         
                         <div class="form-group">
                             <label>NAME ITEM</label>
-                            <input class="form-control" name="name_item" value="<?php echo $dm_hienthi['name_item'] ?>">		
+                            <input class="form-control" name="name_item" value="<?php echo $dm_hienthi['item_name'] ?>">		
                         </div>
                         <div class="form-group">
                             <label>COST ITEM</label>

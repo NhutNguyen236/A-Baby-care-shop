@@ -13,16 +13,16 @@
 <?php
 //add dữ liệu
 $erors = [];
-if (isset($_POST['id_item'])) {
-  $id_item = $_POST['id_item'];
-  $name_item = $_POST['name_item'];
-  $cost = $_POST['cost'];
+if (isset($_POST['name_item'])) {
+    $name_item = $_POST['name_item'];
+    $cost = $_POST['cost'];
 
-  $sql = "INSERT INTO item (id_item, name_item, cost) VALUES ('$id_item','$name_item','$cost')";
-  if (mysqli_query($conn, $sql)) {
-    header('location: index.php');
-  } else {
-    $erors['Loi_them_moi'] = 'Thêm mới không thành công';
+    $sql = "INSERT INTO item (item_id, item_name, cost) VALUES (null, '$name_item','$cost')";
+    if (mysqli_query($connection, $sql)) {
+      header('location: index.php');
+    } else {
+      echo "Thêm mới không thành công";
+      echo mysqli_error($connection);
   }
 }
 ?>
@@ -51,13 +51,10 @@ if (isset($_POST['id_item'])) {
       <div class="card-body">
         <form action="" method="POST">
           <div class="row">
-            <div class="col-sm-3">
-              <label for="">ID ITEM</label>
-              <input type="text" class="form-control" name="id_item" placeholder="id_item" required>
-            </div>
+            
 
             <div class="col-sm-3">
-              <label for="">MÃ LỚP</label>
+              <label for="">ITEM NAME</label>
               <input type="text" class="form-control" name="name_item" placeholder="NAME ITEM">
             </div>
 
@@ -98,8 +95,8 @@ if (isset($_POST['id_item'])) {
                   <td><?php echo $dsnv['item_id'] ?></td>
                   <td><?php echo $dsnv['item_name'] ?></td>
                   <td><?php echo $dsnv['cost'] ?></td>
-                  <td ALIGN="center"><a href="edit.php?id_item=<?php echo $dsnv['id_item'] ?>" class="text-danger">EDIT</a> |
-                    <a href="delete.php?id_item=<?php echo $dsnv['id_item'] ?>" class="text-danger">DELETE</a>
+                  <td ALIGN="center"><a href="edit.php?item_id=<?php echo $dsnv['item_id'];?>" class="text-danger">EDIT</a> |
+                    <a href="delete.php?id_item=<?php echo $dsnv['item_id'];?>" class="text-danger">DELETE</a>
                   </td>
                 </tr>
               <?php endforeach; ?>
