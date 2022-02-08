@@ -19,7 +19,6 @@
                 <div class="content-left">
 
                     <h4 class="title"><a href="single-product.html"><?php echo $row['item_name'];?></a></h4>
-                    <h3><?php echo $row['item_id'];?></h3>
 
                     <div class="ratting">
                         <i class="fa fa-star"></i>

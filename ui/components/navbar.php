@@ -9,7 +9,7 @@
                 <div class="col mt-10 mb-10 d-none d-md-flex">
                     <!-- Header Top Left Start -->
                     <div class="header-top-left">
-                        <p>Welcome to Phuong Anh Baby care</p>
+                        <p>Welcome to Phuong Thao Baby care</p>
                         <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
                     </div><!-- Header Top Left End -->
                 </div>
@@ -69,8 +69,8 @@
                 <div class="col mt-15 mb-15">
                     <!-- Logo Start -->
                     <div class="header-logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo_main.png" alt="Jadusona">
+                        <a href="/store/ui/shop.php">
+                            <img src="assets/images/logo_main.png" alt="Jadusona" width="150" height="150">
                         </a>
                     </div><!-- Logo End -->
                 </div>
@@ -103,37 +103,15 @@
                         <nav>
                             <ul>
                                 <li><a href="shop.php">HOME</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home One</a></li>
-                                        <li><a href="index-2.html">Home Two</a></li>
-                                        <li><a href="index-box.html">Home Box</a></li>
+                                    <ul>
+
                                     </ul>
                                 </li>
                                 <li class="active"><a href="shop.php">SHOP</a>
-                                    <ul class="sub-menu">
-                                        <li class="active"><a href="shop.html">Shop</a></li>
-                                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="single-product-left-sidebar.html">Single Product Left Sidebar</a></li>
-                                        <li><a href="single-product-right-sidebar.html">Single Product Right Sidebar</a></li>
+                                    <ul>
+                                        
                                     </ul>
                                 </li>
-                                <li><a href="#">PAGES</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="cart.php">Cart</a></li>
-                                        <li><a href="checkout.php">Checkout</a></li>
-                                        <li><a href="login-register.php">Login & Register</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">BLOG</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="single-blog.html">Single Blog</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">CONTACT</a></li>
                             </ul>
                         </nav>
                     </div>

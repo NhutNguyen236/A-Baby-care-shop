@@ -51,107 +51,15 @@ include("./functions/session.php");
                 <div class="row">
                     <div class="page-banner-content col">
 
-                        <h1>Cart</h1>
-                        <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                        </ul>
+                        <h1 style="text-align: center;">Checkout successfully!</h1>
 
                     </div>
                 </div>
             </div>
         </div><!-- Page Banner Section End -->
 
-
-
-        <?php
-        include("../database.php");
-        // check if the user hit search button or not
-        // get the search query
-        // $search_query = "SELECT * FROM cart INNER JOIN item on cart.id_item = item.item_id INNER JOIN customer on cart.customer_id = customer.customer_id";
-        // global $search_query_result;
-        include($_SERVER['DOCUMENT_ROOT'] . "/store/ui/controller/getCart.php");
-        $search_query_result = $result;
-        ?>
-
-        <!-- Page Section Start -->
-        <div class="page-section section mt-80 mt-lg-60 mt-md-60 mt-sm-60 mt-xs-40 mb-40 mb-lg-20 mb-md-20 mb-sm-20 mb-xs-0">
-            <div class="container">
-
-                <form action="#">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="cart-table table-responsive mb-40">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th class="pro-thumbnail">STT</th>
-                                            <th class="pro-title">Product</th>
-                                            <th class="pro-price">Price</th>
-                                            <th class="pro-remove">Remove</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <?php foreach ($search_query_result as $dsnv) : ?>
-                                            <tr>
-                                                <td><?php echo $dsnv['id_cart'] ?></td>
-                                                <td><?php echo $dsnv['item_name'] ?></td>
-                                                <td><?php echo $dsnv['cost'] ?></td>
-                                                <td ALIGN="center">
-                                                    <a href="./functions/deleteCart.php?id_cart=<?php echo $dsnv['id_cart'] ?>" class="text-danger">DELETE</a>
-                                                </td>
-                                            </tr>
-
-
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 col-12">
-                            <div class="cart-buttons mb-30">
-                                <a href="shop.php">Continue Shopping</a>
-                            </div>
-                            <div class="cart-coupon mb-40">
-                                <h4>Coupon</h4>
-                                <p>Enter your coupon code if you have one.</p>
-                                <div class="cuppon-form">
-                                    <input type="text" placeholder="Coupon code" />
-                                    <input type="submit" value="Apply Coupon" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-12">
-                            <div class="cart-total fix mb-40">
-                                <h3>Cart Totals</h3>
-                                <table>
-                                    <tbody>
-                                        <!-- <tr class="cart-subtotal">
-                                            <th>Subtotal</th>
-                                            <td><span class="amount" id="subtotal"></span></td>
-                                        </tr> -->
-                                        <tr class="order-total">
-                                            <th>Total</th>
-                                            <td>
-                                                <strong><span class="amount" id="total"></span></strong>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="proceed-to-checkout section mt-30">
-                                    <a href="checkout.php">Proceed to Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div><!-- Page Section End -->
-
         <!-- Brand Section Start -->
-        <div class="brand-section section mb-80 mb-lg-60 mb-md-60 mb-sm-60 mb-xs-40">
+        <div class="brand-section section mb-80 mb-lg-60 mb-md-60 mb-sm-60 mb-xs-40" style="margin-top: 100px;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="brand-slider">
